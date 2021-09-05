@@ -69,17 +69,23 @@
                             </div>
 
                             <div class="col-md-6">
-                                <select class="form-select" required v-model="form.pin_code">
-                                    <option value="">Pincode</option>
-                                    <option value="1207">1207</option>
-                                </select>
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    placeholder="Pincode"
+                                    required
+                                    v-model="form.pin_code"
+                                />
                                 <jet-input-error v-if="form.errors.wrong_ans_img" :message="form.errors.wrong_ans_img" class="mt-2" />
                             </div>
                             <div class="col-md-6">
-                                <select class="form-select" required v-model="form.city">
-                                    <option value="">City</option>
-                                    <option value="Dhaka">Dhaka</option>
-                                </select>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="City"
+                                    required
+                                    v-model="form.city"
+                                />
                                 <jet-input-error v-if="form.errors.wrong_ans_img" :message="form.errors.wrong_ans_img" class="mt-2" />
                             </div>
 

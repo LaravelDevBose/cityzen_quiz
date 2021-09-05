@@ -39,8 +39,8 @@ class QuestionController extends Controller
             'english_audio' => ['required','mimes:mpga,mp3', 'max:500'],
             'gujrati_audio' => ['required','mimes:mpga,mp3', 'max:500'],
             'right_ans' => ['required'],
-            'right_ans_img' => ['required', 'image', 'mimes:jpeg,jpg,png,gifphp','max:500'],
-            'wrong_ans_img' => ['required', 'image', 'mimes:jpeg,jpg,png','max:500'],
+            'right_ans_img' => ['required', 'image', 'mimes:jpeg,jpg,png,gif','max:1024'],
+            'wrong_ans_img' => ['required', 'image', 'mimes:jpeg,jpg,png,gif','max:1024'],
         ])->validate();
 
         try {
@@ -121,14 +121,14 @@ class QuestionController extends Controller
             'english_audio' => ['nullable','mimes:mpga,mp3', 'max:500'],
             'gujrati_audio' => ['nullable','mimes:mpga,mp3', 'max:500'],
             'right_ans' => ['required'],
-            'right_ans_img' => ['nullable', 'image', 'mimes:jpeg,jpg,png','max:500'],
-            'wrong_ans_img' => ['nullable', 'image', 'mimes:jpeg,jpg,png','max:500'],
+            'right_ans_img' => ['nullable', 'image', 'mimes:jpeg,jpg,png,gif','max:1024'],
+            'wrong_ans_img' => ['nullable', 'image', 'mimes:jpeg,jpg,png,gif','max:1024'],
         ])->validate();
 
         try {
             DB::beginTransaction();
 
-            $hindiAudio =$english_audio=$gujrati_audio=$rightImg = $wrongImg = null;
+            $hindiAudio = $english_audio = $gujrati_audio = $rightImg = $wrongImg = null;
             if(!empty($request->file('hindi_audio'))){
                 $hindiAudio = $this->updateAttachment($request->file('hindi_audio'));
                 if (empty($hindiAudio)){

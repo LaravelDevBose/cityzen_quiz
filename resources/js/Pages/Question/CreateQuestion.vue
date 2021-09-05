@@ -93,7 +93,7 @@
                                                 <p class="pl-1">or drag and drop</p>
                                             </div>
                                             <p class="text-xs text-gray-500">
-                                                PNG, JPG up to 500KB
+                                                PNG, JPG, GIF up to 500KB
                                             </p>
                                         </div>
                                         <label for="right_ans_img" v-if="right_img_p">
@@ -103,7 +103,7 @@
                                                ref="RightImagePath"
                                                @change="updateRightPreview"
                                                @input="form.right_ans_img = $event.target.files[0]"
-                                               accept="image/jpeg,png,jpg"
+                                               accept="image/*"
                                         />
                                     </div>
                                     <jet-input-error v-if="form.errors.right_ans_img" :message="form.errors.right_ans_img" class="mt-2" />
@@ -125,7 +125,7 @@
                                                 <p class="pl-1">or drag and drop</p>
                                             </div>
                                             <p class="text-xs text-gray-500">
-                                                PNG, JPG up to 500KB
+                                                PNG, JPG, GIF up to 500KB
                                             </p>
                                         </div>
                                         <label for="wrong_ans_img" v-if="wrong_img_p" >
@@ -135,7 +135,7 @@
                                                ref="WrongImagePath"
                                                @change="updateWrongPreview"
                                                @input="form.wrong_ans_img = $event.target.files[0]"
-                                               accept="image/jpeg,png,jpg"
+                                               accept="image/*"
                                         />
                                     </div>
                                     <jet-input-error v-if="form.errors.wrong_ans_img" :message="form.errors.wrong_ans_img" class="mt-2" />

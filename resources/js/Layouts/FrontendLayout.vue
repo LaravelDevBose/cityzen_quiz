@@ -1,5 +1,20 @@
 <template>
     <div>
+        <Head :title="title ? `${title} - Quiz` : 'Quiz'">
+            <link
+                href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous"
+            />
+            <!-- UIkit CSS -->
+            <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/css/uikit.min.css"
+            />
+            <!-- CSS -->
+            <link rel="stylesheet" :href="route('front.index')+'/assets/css/Page1.css'" />
+        </Head>
         <!-- Header -->
         <div class="header" :style="'background-image: url('+route('front.index')+'/assets/images/inner_banner.jpg)'">
             <nav class="uk-navbar-container" uk-navbar>
@@ -115,11 +130,16 @@
 
 <script>
 import ActionMessage from "@/Jetstream/ActionMessage";
+import { Head } from '@inertiajs/inertia-vue3'
 export default {
     name: "FrontendLayout",
     components: {
-        ActionMessage
-    }
+        ActionMessage,
+        Head
+    },
+    props: {
+        title: String,
+    },
 }
 </script>
 

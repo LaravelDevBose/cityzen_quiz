@@ -1,5 +1,6 @@
 <template>
     <frontend-layout>
+        <Head title="Start Quiz"></Head>
         <!-- Main -->
         <main>
             <div class="container-fluid p-1 py-5 p-md-4">
@@ -90,11 +91,13 @@
 <script>
 import FrontendLayout from "@/Layouts/FrontendLayout";
 import JetButton from "@/Jetstream/Button";
+import { Head } from '@inertiajs/inertia-vue3';
 export default {
     name: "QuizPage",
     components: {
         FrontendLayout,
-        JetButton
+        JetButton,
+        Head
     },
     props:['questions'],
     data(){

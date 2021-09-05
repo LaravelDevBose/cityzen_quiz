@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Inertia\Middleware;
 
 class HandleInertiaRequests extends Middleware
@@ -50,9 +51,6 @@ class HandleInertiaRequests extends Middleware
      */
     public function rootView(Request $request)
     {
-        if (in_array($request->route()->getName(), ['front.index', 'front.quiz', 'front.result'])){
-            $this->rootView = 'front';
-        }
         return $this->rootView;
     }
 }
