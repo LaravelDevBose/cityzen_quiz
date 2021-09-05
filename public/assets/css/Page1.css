@@ -1,0 +1,277 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+
+.header {
+  height: 100vh;
+  background-image: url(../images/inner_banner.jpg);
+}
+
+nav {
+  background-color: transparent !important;
+}
+
+nav #blink {
+  color: orange;
+  animation: blink-animation 1s steps(2, start) infinite;
+}
+
+nav a {
+  text-decoration: none !important;
+  color: white;
+  padding: 0 0.7rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: white;
+}
+
+nav a select option {
+  color: black;
+}
+
+nav .uk-navbar-center {
+  margin-left: 3rem;
+}
+
+nav .links a {
+  padding: 1rem 1rem;
+}
+
+.header .caption h1 {
+  color: white;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+}
+
+main {
+  word-spacing: 5px;
+}
+
+.test-form .container-fluid .container {
+  max-width: 800px;
+}
+
+.test-form .container-fluid.form {
+  background-color: #000e29;
+}
+
+.test-form .container-fluid.form .container {
+  background-color: white;
+  border-radius: 18px;
+}
+
+.test-form .container-fluid.form .container form input,
+.test-form .container-fluid.form .container form select {
+  border-radius: 12px;
+  padding: 0.5rem;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+
+main .container-fluid h2 {
+    font-weight: 600;
+}
+
+main .container-fluid .container {
+    max-width: 800px;
+}
+
+main .container-fluid .cap {
+    padding: 2rem 0;
+}
+
+main .container-fluid .qcard {
+    width: 100%;
+}
+
+main .container-fluid .qcard .container-fluid .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+main .container-fluid .qcard .container-fluid .row .col-md-9 .container-fluid {
+    background-color: #ebebeb;
+}
+
+main .container-fluid .qcard .container-fluid .row .col-md-9 .container-fluid .question {
+    display: inline-flex;
+    align-items: center;
+}
+
+main .container-fluid .qcard .container-fluid .row .col-md-9 .container-fluid .question .qno {
+    width: 3rem;
+    height: 3rem;
+    aspect-ratio: 1;
+    background-color: black;
+    margin: 0 1rem;
+}
+
+main .container-fluid .qcard .container-fluid .row .col-md-9 .container-fluid .question h4 {
+    font-weight: 600;
+}
+
+main .container-fluid .qcard .container-fluid .row .col-md-9 .container-fluid .lang {
+    padding: 0;
+    margin: 0;
+}
+
+main .container-fluid .qcard .container-fluid .row .col-md-9 .container-fluid .lang ul {
+    margin-left: 0.5rem;
+    display: inline-flex;
+    padding: 0.5rem 1rem;
+}
+
+main .container-fluid .qcard .container-fluid .row .col-md-9 .container-fluid .lang ul li {
+    cursor: pointer;
+    list-style: none;
+    padding-right: 1rem;
+    font-weight: 500;
+}
+
+main .container-fluid .qcard .container-fluid .row .col-md-9 .container-fluid .lang .active {
+    font-weight: 700;
+    color: #000c24;
+}
+
+main .container-fluid .qcard .container-fluid .row .col-md-9 .container-fluid .ans {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+main .container-fluid .qcard .container-fluid .row .col-md-9 .container-fluid .ans label,
+main .container-fluid .qcard .container-fluid .row .col-md-9 .container-fluid .ans input {
+    margin: 0.5rem auto;
+}
+
+.uk-checkbox:checked,
+.uk-checkbox:indeterminate,
+.uk-radio:checked {
+    background-color: #000c24 !important;
+    background-image: none !important;
+}
+
+.uk-radio {
+    border: 3px solid #000c24;
+    width: 20px;
+    height: 20px;
+}
+
+@media only screen and (max-width: 316px) {
+    main
+    .container-fluid
+    .qcard
+    .container-fluid
+    .row
+    .col-md-9
+    .container-fluid
+    .lang
+    ul {
+        margin-left: -1rem;
+    }
+    main
+    .container-fluid
+    .qcard
+    .container-fluid
+    .row
+    .col-md-9
+    .container-fluid
+    .lang
+    ul li {
+        font-size: 0.7rem;
+    }
+}
+
+
+main#resultPage {
+    background-size: contain;
+    background-position: center;
+    background-blend-mode: luminosity;
+}
+main .container h2 {
+    font-weight: 600;
+}
+
+main .container .container {
+    max-width: 800px;
+    text-align: center;
+}
+
+main .scorecard {
+    width: 100%;
+    text-align: center;
+}
+
+main .scorecard img {
+    max-width: 200px;
+}
+
+main .scorecard h4 {
+    font-weight: 600;
+}
+
+footer .container-fluid .row .col-md-8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+}
+
+footer .container-fluid .row .col-md-8 p {
+    font-size: 1.3rem;
+    word-spacing: 10px;
+}
+
+footer .container-fluid .row .col-md-8 h4 {
+    font-weight: 500;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+footer .container-fluid .row .col-md-8 .download-btn {
+    background-color: #000e29;
+    color: white;
+    font-weight: 600;
+    max-width: 300px;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+
